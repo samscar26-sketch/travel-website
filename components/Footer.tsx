@@ -1,4 +1,4 @@
-import { FOOTER_CONTACT_INFO, FOOTER_LINKS, SOCIALS } from '@/constants'
+import { FOOTER_CONTACT_INFO, FOOTER_LINKS, SOCIALS,instagram,facebook,youtube } from '@/constants'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
@@ -29,7 +29,7 @@ const Footer = () => {
               <FooterColumn title={FOOTER_CONTACT_INFO.title}>
                 {FOOTER_CONTACT_INFO.links.map((link) => (
                   <Link
-                    href="/"
+                    href=""
                     key={link.label}
                     className="flex gap-4 md:flex-col lg:flex-row"
                   >
@@ -48,13 +48,47 @@ const Footer = () => {
               <FooterColumn title={SOCIALS.title}>
                 <ul className="regular-14 flex gap-4 text-gray-30">
                   {SOCIALS.links.map((link) => (
-                    <Link href="/" key={link}>
+                    <Link href="https://www.youtube.com/@samscar9620" key={link}>
                       <Image src={link} alt="logo" width={24} height={24} />
                     </Link>
                   ))}
                 </ul>
               </FooterColumn>
             </div>
+            <div className="flex flex-col gap-5">
+              <FooterColumn title={instagram.title}>
+                <ul className="regular-14 flex gap-4 text-gray-30">
+                  {instagram.links.map((link) => (
+                    <Link href="https://www.instagram.com/hon.gachie?igsh=MXNrb290b2VpZGppNA==" key={link}>
+                      <Image src={link} alt="logo" width={24} height={24} />
+                    </Link>
+                  ))}
+                </ul>
+              </FooterColumn>
+            </div>
+            <div className="flex flex-col gap-5">
+              <FooterColumn title={facebook.title}>
+                <ul className="regular-14 flex gap-4 text-gray-30">
+                  {facebook.links.map((link) => (
+                    <Link href="https://www.facebook.com/profile.php?id=61588231016218" key={link}>
+                      <Image src={link} alt="logo" width={24} height={24} />
+                    </Link>
+                  ))}
+                </ul>
+              </FooterColumn>
+            </div>
+            <div className="flex flex-col gap-5">
+              <FooterColumn title={youtube.title}>
+                <ul className="regular-14 flex gap-4 text-gray-30">
+                  {youtube.links.map((link) => (
+                    <Link href="https://www.youtube.com/@samscar9620" key={link}>
+                      <Image src={link} alt="logo" width={24} height={24} />
+                    </Link>
+                  ))}
+                </ul>
+              </FooterColumn>
+            </div>
+            
           </div>
         </div>
 

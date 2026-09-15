@@ -52,12 +52,12 @@ export const FOOTER_LINKS = [
   {
     title: 'Learn More',
     links: [
-      'About Hilink',
-      'Press Releases',
+      'About Hilink','(its digital travel App. contact us for )',
+      'Press Release',
       'Environment',
       'Jobs',
       'Privacy Policy',
-      'Contact Us',
+      'Contact Us', '(+254 711890206)'
     ],
   },
   {
@@ -82,5 +82,23 @@ export const SOCIALS = {
     '/twitter.svg',
     '/youtube.svg',
     '/wordpress.svg',
+  ],
+};
+export const instagram = {
+  title: 'instagram',
+  links: [
+    '/instagram.svg',
+  ],
+};
+export const facebook = {
+  title: 'facebook',
+  links: [
+    '/facebook.svg',
+  ],
+};
+export const youtube = {
+  title: 'youtube',
+  links: [
+    '/youtube.svg',
   ],
 };
