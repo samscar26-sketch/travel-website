@@ -1,0 +1,40 @@
+{
+  "name": "travel-management-backend",
+  "version": "1.0.0",
+  "description": "Tour and Travel Management System API",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js",
+    "test": "node -e \"require('./src/app'); console.log('Backend modules loaded successfully.');\"",
+    "db:migrate": "npx sequelize-cli db:migrate",
+    "db:sync": "node -e \"const { sequelize } = require('./src/models'); sequelize.sync({ alter: true }).then(() => { console.log('Database synced successfully.'); process.exit(0); }).catch((error) => { console.error(error); process.exit(1); });\"",
+    "db:seed": "node src/seeders/index.js",
+    "db:migrate:undo": "npx sequelize-cli db:migrate:undo"
+  },
+  "keywords": [
+    "travel",
+    "tour",
+    "api",
+    "express",
+    "sequelize",
+    "mysql"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.6",
+    "dotenv": "^16.6.1",
+    "express": "^4.22.3",
+    "express-rate-limit": "^7.5.1",
+    "jsonwebtoken": "^9.0.3",
+    "mysql2": "^3.24.4",
+    "sequelize": "^6.37.8",
+    "sequelize-cli": "^6.6.5",
+    "uuid": "^10.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
